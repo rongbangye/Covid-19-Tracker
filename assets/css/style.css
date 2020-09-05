@@ -288,3 +288,150 @@ body {
   min-height: 50%;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
 }
+
+/*================== MEDIA-QUERIES-================================================== */
+
+@media only screen and (max-width: 1200px) {
+  #col-two {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .live-country {
+    margin-top: 0rem;
+    width: 50.6%;
+    height: 100%;
+  }
+  .circle-recovery {
+    height: 11rem;
+    width: 11rem;
+    padding: 4.6rem;
+    margin: 3rem 0rem;
+    margin-left: 32%;
+    background: radial-gradient(
+      circle,
+      rgba(251, 251, 251, 1) 35%,
+      rgba(170, 229, 203, 0.844) 35%,
+      rgba(251, 251, 251, 1) 84%
+    );
+  }
+  .ratio-recovery {
+    height: 100%;
+    width: 50.6%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .card-top {
+    padding: 0.3rem 1rem;
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+
+  .btn-symptoms {
+    width: 50%;
+  }
+  .btn-news {
+    width: 50%;
+  }
+  #col-two {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .live-country {
+    width: 51.1%;
+  }
+  .circle-recovery {
+    margin-left: 22%;
+  }
+  .ratio-recovery {
+    width: 51.1%;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .circle {
+    margin: 0 2rem;
+  }
+  .card-top {
+    padding: 0.3rem 1rem;
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+
+  .btn-symptoms {
+    width: 30%;
+  }
+  .btn-news {
+    width: 30%;
+  }
+  #col-two {
+    display: block;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .live-country {
+    width: 100%;
+    height: 60%;
+    margin-top: 0.9rem;
+
+    width: 107%;
+  }
+  .circle-recovery {
+    margin-left: 32%;
+  }
+  .ratio-recovery {
+    width: 107%;
+    height: 50%;
+  }
+  .news-symptoms-container {
+    display: block;
+  }
+  .symptoms {
+    padding: 1rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+  .news {
+    margin-right: 0rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .card-top {
+    padding: 0.3rem 1rem;
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+  .circle {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  .btn-symptoms {
+    width: 100%;
+  }
+  .btn-news {
+    width: 100%;
+  }
+
+  .live-country {
+    height: 60%;
+    margin-top: 0.9rem;
+
+    width: 110%;
+  }
+  .circle-recovery {
+    margin-left: 21%;
+  }
+  .ratio-recovery {
+    width: 110%;
+  }
+
+  .news {
+    margin-right: 0rem;
+    padding: 1rem;
+  }
+}
