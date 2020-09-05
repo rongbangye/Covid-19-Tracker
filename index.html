@@ -29,6 +29,7 @@
     <title>Covid -Tracker</title>
   </head>
   <body>
+    <!-------------- navigation bar ----------------------------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand mr-5" href="#">
         <i class="fas fa-virus"></i>Covid-Tracker</a
@@ -66,6 +67,153 @@
         </ul>
       </div>
     </nav>
+
+    <!------------------------- main container----------------------------- -->
+
+    <!-- main-body -->
+    <main>
+      <div class="row main-container">
+        <div class="col-xl-9 col-sm-12" id="col-one">
+          <div class="row card-container">
+            <div class="card d-flex">
+              <span>Total Death<i class="fas fa-caret-down"></i></span>
+              <h5>34,421</h5>
+            </div>
+            <div class="card">
+              <span>Active Cases<i class="fas fa-caret-down"></i></span>
+              <h5>540,421</h5>
+            </div>
+            <div class="card">
+              <span>Recovered<i class="fas fa-caret-up"></i></span>
+              <h5>124,421</h5>
+            </div>
+            <div class="card">
+              <span>Total Cases<i class="fas fa-caret-down"></i></span>
+              <h5>788,421</h5>
+            </div>
+          </div>
+
+          <div class="row d-flex centeral-container my-3">
+            <div class="col-md-7">
+              <div class="row col-sm-12 p-1">
+                <h5>Affected Areas</h5>
+              </div>
+              <div class="chart">
+                <div id="curve_chart" style="width: 490px; height: 244px"></div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="row col-sm-12 p-1">
+                <h5>Top Countries</h5>
+              </div>
+              <div class="top-countries d-flex">
+                <div class="card-top">
+                  <div class="circle circle-one">26%</div>
+                  <div>
+                    <h6>China</h6>
+                    <p>
+                      Affected -<span>890</span> &nbsp; Recovered-<span
+                        >234</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="card-top">
+                  <div class="circle circle-two">26%</div>
+                  <div>
+                    <h6>Italy</h6>
+                    <p>
+                      Affected -<span>890</span> &nbsp;Recovered-<span
+                        >234</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="card-top">
+                  <div class="circle circle-three">26%</div>
+                  <div>
+                    <h6>USA</h6>
+                    <p>
+                      Affected -<span>890</span>&nbsp; Recovered-<span
+                        >234</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row news-symptoms-container">
+            <div class="col news">
+              <div class="btn btn-news">News</div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              eaque incidunt repellat iusto, dolor inventore eveniet mollitia
+              beatae magni facere!
+            </div>
+            <div class="col symptoms">
+              <div class="btn btn-symptoms">Symptoms</div>
+              <a href="https://www.freepik.com/vectors/health"
+                ><img
+                  src="./assets/img/cough.jpg"
+                  style="color: red; height: 170px"
+              /></a>
+              <a href="https://www.freepik.com/vectors/health"
+                ><img src="./assets/img/cold.jpg" style="height: 170px"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="col sidebar" id="col-two">
+          <div class="row ratio-recovery">
+            <h5>Ratio of recovery</h5>
+            <div class="circle-recovery">26%</div>
+            <p>Affected -<span>890</span> &nbsp; Recovered-<span>234</span></p>
+          </div>
+          <div class="row live-country d-block">
+            <h5 class="">Live Reports</h5>
+            <ul>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/be/shiny/32.png"
+                />China
+                <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/br/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/be/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/ad/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/ae/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+              <li class="p-2">
+                <img
+                  class="mr-3"
+                  src="https://www.countryflags.io/af/flat/32.png"
+                />China <span>12.23</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script
       type="text/javascript"
