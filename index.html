@@ -20,6 +20,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/map.css" />
+  <link rel="stylesheet" href="./assets/css/live-report.css">
   <title>Covid -Tracker</title>
 </head>
 
@@ -139,29 +140,25 @@
           <div class="circle-recovery">26%</div>
           <p>Affected -<span>890</span> &nbsp; Recovered-<span>234</span></p>
         </div>
+
+        <!-- Add Live Country Report -->
         <div class="row live-country d-block">
-          <h5 class="">Live Reports</h5>
-          <ul>
-            <li class="p-2">
-              <img class="mr-3" src="" />China
-              <span>12.23</span>
-            </li>
-            <li class="p-2">
-              <img class="mr-3" src="" />China <span>12.23</span>
-            </li>
-            <li class="p-2">
-              <img class="mr-3" src="" />China <span>12.23</span>
-            </li>
-            <li class="p-2">
-              <img class="mr-3" src="" />China <span>12.23</span>
-            </li>
-            <li class="p-2">
-              <img class="mr-3" src="" />China <span>12.23</span>
-            </li>
-            <li class="p-2">
-              <img class="mr-3" src="" />China <span>12.23</span>
-            </li>
-          </ul>
+          <div id="live-reports">
+            <div class="live-reports-header">
+              <h5 class="">Live Reports</h5>
+              <div class="tabs">
+                <div class="prev">Prev</div>
+                <div class="next">Next</div>
+              </div>
+            </div>
+
+            <ul id="live-reports-list">
+              <!-- <li class="p-2">
+                <img class="mr-3" src="" />China
+                <span>12.23</span>
+              </li> -->
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -171,6 +168,8 @@
   <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAco77LZLiIdkLPTuqg-q-C7DBhjgCoatk&callback=initMap"></script>
   <script src="./assets/js/map.js"></script>
+  <!-- Add Live Country Report Function -->
+  <script src="./assets/js/live-report.js"></script>
   <!-- Add Utils Function -->
   <script src="./assets/js/utils.js"></script>
 
