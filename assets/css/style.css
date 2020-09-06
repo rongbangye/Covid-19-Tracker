@@ -135,13 +135,13 @@ body {
   /* clip-path: polygon(47% 34%, 84% 35%, 84% 70%, 48% 70%); */
 }
 .fa-caret-down {
-  margin-left: 0.9rem;
-  font-size: 1.1rem;
+  margin-left: 0.7rem;
+  font-size: 1.5rem;
   color: var(--green);
 }
 .fa-caret-up {
-  margin-left: 0.9rem;
-  font-size: 1.1rem;
+  margin-left: 0.7rem;
+  font-size: 1.5rem;
   color: var(--red-dark);
 }
 .top-countries {
