@@ -435,3 +435,88 @@ body {
     padding: 1rem;
   }
 }
+/* ========= MODAL =================================================== */
+.button {
+  background: #428bca;
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #3876ac;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container {
+  animation-name: whenModalopen;
+  margin: 10% auto;
+  width: 60%;
+
+  animation-duration: 1s;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: white;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+  font-size: 1.2rem;
+}
+
+.modal-footer {
+  background: white;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  font-size: 1.5rem;
+  color: var(--green-dark);
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes whenModalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
