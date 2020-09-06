@@ -1,238 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- bootstrap--- -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+  <!-- bootstrap--- -->
 
-    <!-- fontawsome - icons--- -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
-    <!------ google-fonts -------- -->
+  <!-- fontawsome - icons--- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/map.css" />
-    <title>Covid -Tracker</title>
-  </head>
+  <!------ google-fonts -------- -->
 
-  <body>
-    <!-------------- navigation bar ----------------------------------------- -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand mr-5" href="#">
-        <i class="fas fa-virus"></i>Covid-Tracker</a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/map.css" />
+  <title>Covid -Tracker</title>
+</head>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form id="search-btn" class="form-inline ml-5 my-2 my-md-0">
-          <input
-            class="form-control px-5"
-            id="country-input"
-            type="search"
-            placeholder="Country"
-            aria-label="Search"
-          />
-          <button class="btn-search my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#">News</a>
-          </li>
+<body>
+  <!-------------- navigation bar ----------------------------------------- -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand mr-5" href="#">
+      <i class="fas fa-virus"></i>Covid-Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#">Symptoms</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form id="search-btn" class="form-inline ml-5 my-2 my-md-0">
+        <input class="form-control px-5" id="country-input" type="search" placeholder="Country" aria-label="Search" />
+        <button class="btn-search my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">News</a>
+        </li>
 
-    <!------------------------- main container----------------------------- -->
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">Symptoms</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- main-body -->
-    <main>
-      <!-- MODAL =============== -->
+  <!------------------------- main container----------------------------- -->
 
-      <div id="modal" class="modal">
-        <div class="modal-container">
-          <div class="modal-header">
-            <a>
-              <i class="fas fa-virus"></i
-              ><span class="text-dark">Covid-Tracker</span></a
-            >
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button class="close">close</button>
-          </div>
+  <!-- main-body -->
+  <main>
+    <!-- MODAL =============== -->
+
+    <div id="modal" class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <a>
+            <i class="fas fa-virus"></i><span class="text-dark">Covid-Tracker</span></a>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button class="close">close</button>
         </div>
       </div>
+    </div>
 
-      <!-- MODAL =============== -->
+    <!-- MODAL =============== -->
 
-      <div class="row main-container">
-        <div class="col-xl-9 col-sm-12" id="col-one">
-          <div class="row card-container">
-            <div class="card d-flex">
-              <span>Total Death<i class="fas fa-caret-up"></i></span>
-              <h5 id="total-death">34,421</h5>
-            </div>
-            <div class="card">
-              <span>Active Cases<i class="fas fa-caret-up"></i></span>
-              <h5 id="active-cases">540,421</h5>
-            </div>
-            <div class="card">
-              <span>Recovered<i class="fas fa-caret-down"></i></span>
-              <h5 id="recovered">124,421</h5>
-            </div>
-            <div class="card">
-              <span>Total Cases<i class="fas fa-caret-up"></i></span>
-              <h5 id="total-cases">788,421</h5>
-            </div>
+    <div class="row main-container">
+      <div class="col-xl-9 col-sm-12" id="col-one">
+        <div class="row card-container">
+          <div class="card d-flex">
+            <span>Total Death<i class="fas fa-caret-up"></i></span>
+            <h5 id="total-death">34,421</h5>
           </div>
-
-          <div class="row d-flex centeral-container my-3">
-            <div class="col-md-7">
-              <div class="row col-sm-12 p-1">
-                <h5>Affected Areas</h5>
-              </div>
-
-              <!-- Added Map -->
-              <div id="map"></div>
-            </div>
-            <div class="col-md-5">
-              <div class="row col-sm-12 p-1">
-                <h5>Top Countries</h5>
-              </div>
-              <div class="top-countries d-flex">
-                <div class="card-top">
-                  <div class="circle circle-one">26%</div>
-                  <div>
-                    <h6>China</h6>
-                    <p>
-                      Affected -<span>890</span> &nbsp; Recovered-<span
-                        >234</span
-                      >
-                    </p>
-                  </div>
-                </div>
-                <div class="card-top">
-                  <div class="circle circle-two">26%</div>
-                  <div>
-                    <h6>Italy</h6>
-                    <p>
-                      Affected -<span>890</span> &nbsp;Recovered-<span
-                        >234</span
-                      >
-                    </p>
-                  </div>
-                </div>
-                <div class="card-top">
-                  <div class="circle circle-three">26%</div>
-                  <div>
-                    <h6>USA</h6>
-                    <p>
-                      Affected -<span>890</span>&nbsp; Recovered-<span
-                        >234</span
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="card">
+            <span>Active Cases<i class="fas fa-caret-up"></i></span>
+            <h5 id="active-cases">540,421</h5>
           </div>
-          <div class="row news-symptoms-container">
-            <div class="col news">
-              <div class="btn btn-news">News</div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              eaque incidunt repellat iusto, dolor inventore eveniet mollitia
-              beatae magni facere!
+          <div class="card">
+            <span>Recovered<i class="fas fa-caret-down"></i></span>
+            <h5 id="recovered">124,421</h5>
+          </div>
+          <div class="card">
+            <span>Total Cases<i class="fas fa-caret-up"></i></span>
+            <h5 id="total-cases">788,421</h5>
+          </div>
+        </div>
+
+        <div class="row d-flex centeral-container my-3">
+          <div class="col-md-7">
+            <div class="row col-sm-12 p-1">
+              <h5>Affected Areas</h5>
             </div>
-            <div class="col symptoms">
-              <div class="btn btn-symptoms">Symptoms</div>
-              <a href="https://www.freepik.com/vectors/health"
-                ><img
-                  src="./assets/img/cough.jpg"
-                  style="color: red; height: 170px"
-              /></a>
-              <a href="https://www.freepik.com/vectors/health"
-                ><img src="./assets/img/cold.jpg" style="height: 170px"
-              /></a>
+
+            <!-- Added Map -->
+            <div id="map"></div>
+          </div>
+          <div class="top-countries d-flex">
+            Country with the highest affected
+
+            <!-- Add the Highest Affected Country -->
+            <div class="card-top top-country-first">
+            </div>
+
+            <!-- Add the Second Highest Affected Country -->
+            <div class="card-top top-country-second"></div>
+
+            <!-- Add the Second Highest Affected Country -->
+            <div class="card-top top-country-third">
+
             </div>
           </div>
         </div>
-        <div class="col sidebar" id="col-two">
-          <div class="row ratio-recovery">
-            <h5>Ratio of recovery</h5>
-            <div class="circle-recovery">26%</div>
-            <p>Affected -<span>890</span> &nbsp; Recovered-<span>234</span></p>
+        <div class="row news-symptoms-container">
+          <div class="col news">
+            <div class="btn btn-news">News</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            eaque incidunt repellat iusto, dolor inventore eveniet mollitia
+            beatae magni facere!
           </div>
-          <div class="row live-country d-block">
-            <h5 class="">Live Reports</h5>
-            <ul>
-              <li class="p-2">
-                <img class="mr-3" src="" />China
-                <span>12.23</span>
-              </li>
-              <li class="p-2">
-                <img class="mr-3" src="" />China <span>12.23</span>
-              </li>
-              <li class="p-2">
-                <img class="mr-3" src="" />China <span>12.23</span>
-              </li>
-              <li class="p-2">
-                <img class="mr-3" src="" />China <span>12.23</span>
-              </li>
-              <li class="p-2">
-                <img class="mr-3" src="" />China <span>12.23</span>
-              </li>
-              <li class="p-2">
-                <img class="mr-3" src="" />China <span>12.23</span>
-              </li>
-            </ul>
+          <div class="col symptoms">
+            <div class="btn btn-symptoms">Symptoms</div>
+            <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cough.jpg"
+                style="color: red; height: 170px" /></a>
+            <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cold.jpg"
+                style="height: 170px" /></a>
           </div>
         </div>
       </div>
-    </main>
+      <div class="col sidebar" id="col-two">
+        <div class="row ratio-recovery">
+          <h5>Ratio of recovery</h5>
+          <div class="circle-recovery">26%</div>
+          <p>Affected -<span>890</span> &nbsp; Recovered-<span>234</span></p>
+        </div>
+        <div class="row live-country d-block">
+          <h5 class="">Live Reports</h5>
+          <ul>
+            <li class="p-2">
+              <img class="mr-3" src="" />China
+              <span>12.23</span>
+            </li>
+            <li class="p-2">
+              <img class="mr-3" src="" />China <span>12.23</span>
+            </li>
+            <li class="p-2">
+              <img class="mr-3" src="" />China <span>12.23</span>
+            </li>
+            <li class="p-2">
+              <img class="mr-3" src="" />China <span>12.23</span>
+            </li>
+            <li class="p-2">
+              <img class="mr-3" src="" />China <span>12.23</span>
+            </li>
+            <li class="p-2">
+              <img class="mr-3" src="" />China <span>12.23</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <!-- Added Map Script -->
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAco77LZLiIdkLPTuqg-q-C7DBhjgCoatk&callback=initMap"
-    ></script>
-    <script src="./assets/js/map.js"></script>
-    <!-- Add Utils Function -->
-    <script src="./assets/js/utils.js"></script>
+  <!-- Added Map Script -->
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAco77LZLiIdkLPTuqg-q-C7DBhjgCoatk&callback=initMap"></script>
+  <script src="./assets/js/map.js"></script>
+  <!-- Add Utils Function -->
+  <script src="./assets/js/utils.js"></script>
 
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
