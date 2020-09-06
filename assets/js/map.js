@@ -66,53 +66,70 @@ function initMap() {
   }
 }
 
-// function fetchToCountries() {
-//   const topOne = document.querySelector(".topOne");
-//   const topTwo = document.querySelector(".topTwo");
-//   const topThree = document.querySelector(".topThree");
-//   const worldWide = document.querySelector(".worldWide");
+function fetchToCountries() {
+  const topOne = document.querySelector(".top-country-first");
+  const topTwo = document.querySelector(".top-country-second");
+  const topThree = document.querySelector(".top-country-third");
 
-//   fetch("https://covid-19.dataflowkit.com/v1")
-//     .then(response => response.json())
-//     .then(covidData => {
-//       // console.log(covidData[0]);
-//       worldWide.innerHTML = `
-//         World
-//         <br>
-//         Active Cases: ${covidData[0]["Total Cases_text"]}
-//         <br>
-//         Total Recovered: ${covidData[0]["Total Recovered_text"]}
-//       `;
+  fetch("https://disease.sh/v3/covid-19/countries")
+    .then(response => response.json())
+    .then(countries => {
+      console.log(countries);
+      sortTopCountries = countries.sort((a, b) => {
+        return b["cases"] - a["cases"];
+      });
 
-//       let topCountries = covidData.slice(1);
-//       sortTopCountries = topCountries.sort((a, b) => {
-//         return a["Total Cases_text"] - b["Total Cases_text"];
-//       });
-//       topThreeCountries = sortTopCountries.slice(0, 3);
+      topThreeCountries = sortTopCountries.slice(0, 3);
+      topOne.innerHTML = `
+        <div class="circle circle-one">${makeNumberToPercentage(
+          topThreeCountries[0].recovered,
+          topThreeCountries[0].cases
+        )}%</div>
+        <div>
+        <h6>${topThreeCountries[0].country}</h6>
+        <p>Affected -<span>${kFormatter(
+          topThreeCountries[0].cases,
+          2
+        )}</span> &nbsp; Recovered-<span>${kFormatter(
+        topThreeCountries[0].recovered,
+        2
+      )}</span></p>
+      </div>
+      `;
 
-//       topOne.innerHTML = `
-//         Top 1: ${topThreeCountries[0]["Country_text"]}
-//         <br>
-//         Active Cases: ${topThreeCountries[0]["Total Cases_text"]}
-//         <br>
-//         Total Recovered: ${topThreeCountries[0]["Total Recovered_text"]}
-//       `;
+      topTwo.innerHTML = `
+        <div class="circle circle-two">${makeNumberToPercentage(
+          topThreeCountries[1].recovered,
+          topThreeCountries[1].cases
+        )}%</div>
+        <div>
+        <h6>${topThreeCountries[1].country}</h6>
+        <p>Affected -<span>${kFormatter(
+          topThreeCountries[1].cases,
+          2
+        )}</span> &nbsp; Recovered-<span>${kFormatter(
+        topThreeCountries[1].recovered,
+        2
+      )}</span></p>
+      </div>
+      `;
 
-//       topTwo.innerHTML = `
-//         Top 1: ${topThreeCountries[1]["Country_text"]}
-//         <br>
-//         Active Cases: ${topThreeCountries[1]["Total Cases_text"]}
-//         <br>
-//         Total Recovered: ${topThreeCountries[1]["Total Recovered_text"]}
-//       `;
-
-//       topThree.innerHTML = `
-//         Top 1: ${topThreeCountries[2]["Country_text"]}
-//         <br>
-//         Active Cases: ${topThreeCountries[2]["Total Cases_text"]}
-//         <br>
-//         Total Recovered: ${topThreeCountries[2]["Total Recovered_text"]}
-//       `;
-//     });
-// }
-// fetchToCountries();
+      topThree.innerHTML = `
+        <div class="circle circle-three">${makeNumberToPercentage(
+          topThreeCountries[2].recovered,
+          topThreeCountries[2].cases
+        )}%</div>
+        <div>
+        <h6>${topThreeCountries[2].country}</h6>
+        <p>Affected -<span>${kFormatter(
+          topThreeCountries[2].cases,
+          2
+        )}</span> &nbsp; Recovered-<span>${kFormatter(
+        topThreeCountries[2].recovered,
+        2
+      )}</span></p>
+      </div>
+      `;
+    });
+}
+fetchToCountries();
