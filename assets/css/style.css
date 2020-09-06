@@ -436,28 +436,16 @@ body {
   }
 }
 /* ========= MODAL =================================================== */
-.button {
-  background: #428bca;
-  padding: 1em 2em;
-  color: #fff;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background: #3876ac;
-}
 
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
+  z-index: 10;
+  left: 0;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -467,11 +455,6 @@ body {
   width: 60%;
 
   animation-duration: 1s;
-}
-
-.modal-header h2,
-.modal-footer h3 {
-  margin: 0;
 }
 
 .modal-header {
@@ -501,15 +484,8 @@ body {
 }
 
 .close {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   color: var(--green-dark);
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 @keyframes whenModalopen {
