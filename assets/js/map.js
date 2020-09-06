@@ -80,6 +80,8 @@ function fetchToCountries() {
       });
 
       topThreeCountries = sortTopCountries.slice(0, 3);
+
+      // Render Top Three Countries
       topOne.innerHTML = `
         <div class="circle circle-one">${makeNumberToPercentage(
           topThreeCountries[0].recovered,
