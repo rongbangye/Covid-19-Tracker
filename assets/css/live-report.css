@@ -41,6 +41,16 @@
   width: -webkit-fill-available;
 }
 
+#live-reports-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#live-reports-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .liveReport-flag {
   margin-right: 2px;
 }
