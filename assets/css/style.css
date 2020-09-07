@@ -290,6 +290,9 @@ body {
   min-height: 50%;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
 }
+#live-reports-list {
+  padding-right: 0 !important;
+}
 /* .live-country span {
   font-size: 0.9rem;
   font-family: "loto", sans-serif;
@@ -298,7 +301,7 @@ body {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   font-family: "loto", sans-serif;
-  background-color:var(--gray-light)
+  background-color: var(--gray-light);
 }
 .countryLiveReport:hover {
   background-color: rgb(247, 247, 247);
