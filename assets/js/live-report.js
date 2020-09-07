@@ -18,7 +18,7 @@ fetch("https://disease.sh/v3/covid-19/countries")
       li.innerHTML += `
         <div class="countryLiveReport p-2">
             <div>
-              <img class=" liveReport-flag" style="width: 50px; height:30px" src="${
+              <img class=" liveReport-flag" style="width: 30px; height:20px" src="${
                 country.countryInfo.flag
               }" alt="flag">
               ${country.country}
