@@ -1,6 +1,6 @@
 fetch("https://disease.sh/v3/covid-19/countries")
-  .then(response => response.json())
-  .then(countries => {
+  .then((response) => response.json())
+  .then((countries) => {
     const previousTab = document.querySelector(".prev");
     const nextTab = document.querySelector(".next");
     const liveReports = document.querySelector("#live-reports-list");
@@ -13,12 +13,12 @@ fetch("https://disease.sh/v3/covid-19/countries")
     let page = 0;
 
     console.log(countryList);
-    sortTopCountries.forEach(country => {
+    sortTopCountries.forEach((country) => {
       let li = document.createElement("li");
       li.innerHTML += `
         <div class="countryLiveReport p-2">
             <div>
-              <img class=" liveReport-flag" style="width: 30px; height:20px" src="${
+              <img class=" liveReport-flag  mx-2" style="width: 30px; height:20px" src="${
                 country.countryInfo.flag
               }" alt="flag">
               ${country.country}
