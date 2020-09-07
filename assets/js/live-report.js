@@ -1,21 +1,23 @@
+// DOM elments
+
+const previousTab = document.querySelector(".prev");
+const nextTab = document.querySelector(".next");
+const liveReports = document.querySelector("#live-reports-list");
+
 fetch("https://disease.sh/v3/covid-19/countries")
   .then((response) => response.json())
   .then((countries) => {
-    const previousTab = document.querySelector(".prev");
-    const nextTab = document.querySelector(".next");
-    const liveReports = document.querySelector("#live-reports-list");
-
     sortTopCountries = countries.sort((a, b) => {
       return b["cases"] - a["cases"];
     });
-    // console.log(sortTopCountries);
+
     let countryList = [];
     let page = 0;
 
-    console.log(countryList);
     sortTopCountries.forEach((country) => {
-      let li = document.createElement("li");
-      li.innerHTML += `
+      // create <li> element
+      let liveCountryEL = document.createElement("li");
+      liveCountryEL.innerHTML += `
         <div class="countryLiveReport p-2">
             <div>
               <img class=" liveReport-flag  mx-2" style="width: 30px; height:20px" src="${
@@ -28,7 +30,20 @@ fetch("https://disease.sh/v3/covid-19/countries")
             </div>
         </div>
       `;
-      countryList.push(li);
+      countryList.push(liveCountryEL);
+
+      //     fetch data if user clicks live country
+      var getElement = function (event) {
+        // get country name from clicked element
+        var countryClicked =
+          event.currentTarget.children[0].children[0].textContent;
+
+        //call getCountryData with clicked country name
+
+        getCountryData(countryClicked);
+      };
+
+      liveCountryEL.addEventListener("click", getElement);
     });
 
     for (let i = 0; i < page + 10; i++) {

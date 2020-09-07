@@ -293,10 +293,35 @@ body {
 #live-reports-list {
   padding-right: 0 !important;
 }
-/* .live-country span {
-  font-size: 0.9rem;
-  font-family: "loto", sans-serif;
-} */
+.live-country .tabs {
+  font-size: 0.7rem;
+  margin-left: 2rem;
+}
+.live-country .next {
+  border: 1px solid var(--green-medium);
+
+  color: var(--green-medium);
+  padding: 0rem 0.9rem;
+  border-top-right-radius: 0.9rem;
+  border-bottom-right-radius: 0.9rem;
+  font-weight: bold;
+}
+.live-country .prev {
+  border: 1px solid var(--green-medium);
+  color: var(--green-medium);
+
+  margin-right: 0rem;
+  padding: 0 0.9rem;
+
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+  font-weight: bold;
+}
+.next:hover,
+.prev:hover {
+  font-size: 0.75rem;
+  background-color: var(--gray-light);
+}
 .countryLiveReport {
   font-size: 0.8rem;
   margin-top: 0.5rem;
@@ -366,6 +391,11 @@ body {
   }
   .ratio-recovery {
     width: 51.1%;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .top-countries {
+    margin-top: 3.5rem;
   }
 }
 @media only screen and (max-width: 660px) {
@@ -452,6 +482,9 @@ body {
   .news {
     margin-right: 0rem;
     padding: 1rem;
+  }
+  #map {
+    min-height: 150px !important;
   }
 }
 /* ========= MODAL =================================================== */

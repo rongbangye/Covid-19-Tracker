@@ -3,4 +3,12 @@
   height: 85%;
   background-color: lightgray;
   border-radius: 0.3rem;
+  /* / */
+  width: 100%;
+  margin-bottom: 0rem;
+  border-radius: 0.3rem;
+  margin-right: 0.8rem;
+  overflow: hidden;
+  min-height: 250px;
+ 
 }

@@ -43,7 +43,7 @@ var getCountryData = function (country) {
   var urlCountry =
     "https://disease.sh/v3/covid-19/countries/" +
     country +
-    "?yesterday=true&strict=true";
+    "?yesterday=false&strict=false";
 
   // fetch data for each country
   fetch(urlCountry).then((response) => {
@@ -52,6 +52,7 @@ var getCountryData = function (country) {
       if (data.message) {
         openModal(data.message);
       }
+
       // if there is response display data
       displayDataToTheUI(data);
     });
