@@ -97,7 +97,8 @@ body {
   height: auto;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 15vh;
+  height: 12vh;
+  font-size: 0.8rem;
 }
 .card {
   width: 23.5%;
@@ -105,6 +106,9 @@ body {
   padding: 0.5rem;
   border: none;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card h5 {
   display: flex;
@@ -256,7 +260,7 @@ body {
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.3rem;
-  height: 48%;
+  min-height: 28%;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
 }
 .circle-recovery {
@@ -285,7 +289,6 @@ body {
   background-color: #fff;
   margin-bottom: 1rem;
   padding: 1rem;
-  padding-bottom: 0;
   border-radius: 0.3rem;
   min-height: 50%;
   box-shadow: 0px 0px 13px 5px rgb(233, 233, 233);
@@ -334,7 +337,7 @@ body {
 
 /*================== MEDIA-QUERIES-================================================== */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   #col-two {
     display: flex;
     justify-content: space-between;
@@ -448,7 +451,29 @@ body {
     padding: 1rem;
   }
 }
+@media only screen and (max-width: 608px) {
+  h5{
+    font-size:1rem;
+  }
+ .total-container {
+    margin-bottom: 1.5rem;
+  }
+  .card-container .today-container{
+    /* margin-bottom: -1rem; */
+  }
+  .card {
+    margin-bottom: 0rem;
+  }
+}
 @media only screen and (max-width: 435px) {
+  .navbar {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .main-container {
+    height: 100vh;
+    margin: 0 1rem;
+  }
   .card-top {
     padding: 0.3rem 1rem;
     justify-content: flex-start;

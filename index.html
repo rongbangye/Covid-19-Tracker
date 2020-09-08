@@ -97,7 +97,7 @@
 
       <div class="row main-container">
         <div class="col-xl-9 col-sm-12" id="col-one">
-          <div class="row card-container">
+          <div class="row card-container total-container">
             <div class="card d-flex">
               <span>Total Death<i class="fas fa-caret-up"></i> </span>
 
@@ -108,12 +108,31 @@
               <h5 id="active-cases">540,421</h5>
             </div>
             <div class="card">
-              <span>Recovered<i class="fas fa-caret-down"></i></span>
+              <span>Total Recovered<i class="fas fa-caret-down"></i></span>
               <h5 id="recovered">124,421</h5>
             </div>
             <div class="card">
               <span>Total Cases<i class="fas fa-caret-up"></i></span>
               <h5 id="total-cases">788,421</h5>
+            </div>
+          </div>
+          <div class="row card-container today-container mt-3">
+            <div class="card">
+              <span>Today Death </span>
+
+              <h5 id="today-death">34,421</h5>
+            </div>
+            <div class="card">
+              <span>Today Cases</span>
+              <h5 id="today-cases">540,421</h5>
+            </div>
+            <div class="card">
+              <span>Today Recovered</span>
+              <h5 id="today-recovered">124,421</h5>
+            </div>
+            <div class="card">
+              <span>Total Tests</span>
+              <h5 id="total-tests">788,421</h5>
             </div>
           </div>
 
@@ -124,9 +143,7 @@
               </div>
 
               <!-- Added Map -->
-              <!-- <div class="chart">
-                <div id="curve_chart" style="width: 490px; height: 244px"></div>
-              </div> -->
+
               <div id="map"></div>
             </div>
             <div class="col -md-5 top-countries d-flex">
@@ -177,12 +194,7 @@
                 </div>
               </div>
 
-              <ul id="live-reports-list">
-                <!-- <li class="p-2">
-                <img class="mr-3" src="" />China
-                <span>12.23</span>
-              </li> -->
-              </ul>
+              <ul id="live-reports-list"></ul>
             </div>
           </div>
           <div class="row ratio-recovery">
