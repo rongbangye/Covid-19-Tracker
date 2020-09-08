@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.news-info div {
+  width: 80%;
+}
+
 .news-main-container {
   height: 80%;
   display: flex;
@@ -12,7 +16,6 @@
 }
 
 .news-title {
-  height: 110px;
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -20,6 +23,7 @@
 .news-detail {
   padding-left: 10px;
   margin: 0;
+  overflow: hidden;
 }
 
 .readMoreNews {
