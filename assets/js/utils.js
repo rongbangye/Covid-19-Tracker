@@ -26,3 +26,8 @@ function kFormatter(num, digits) {
 function makeNumberToPercentage(a, b) {
   return Math.floor((a / b) * 100);
 }
+
+//Truncate a String refer from: https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-truncate-a-string/16089
+function truncateString(str, num) {
+  return str.length > num ? str.slice(0, num) + "..." : str;
+}
