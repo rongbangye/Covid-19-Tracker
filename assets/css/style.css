@@ -250,7 +250,9 @@ body {
 }
 
 .ratio-recovery {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
   background-color: #fff;
@@ -270,7 +272,7 @@ body {
   border-radius: 50%;
   border: 1px solid var(--gray-light);
   padding: 3.6rem;
-  margin: 3rem 3rem;
+  /* margin: 3rem 3rem; */
 
   background: rgb(251, 251, 251);
   background: radial-gradient(
@@ -351,7 +353,7 @@ body {
     width: 11rem;
     padding: 4.6rem;
     margin: 3rem 0rem;
-    margin-left: 32%;
+    /* margin-left: 32%; */
     background: radial-gradient(
       circle,
       rgba(251, 251, 251, 1) 35%,
@@ -387,7 +389,7 @@ body {
     width: 51.1%;
   }
   .circle-recovery {
-    margin-left: 22%;
+    /* margin-left: 22%; */
   }
   .ratio-recovery {
     width: 51.1%;
@@ -428,9 +430,9 @@ body {
     width: 107%;
   }
 
-  .circle-recovery {
+  /* .circle-recovery {
     margin-left: 32%;
-  }
+  } */
   .ratio-recovery {
     width: 107%;
     height: 50%;
