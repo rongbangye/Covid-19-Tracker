@@ -16,7 +16,7 @@
 }
 
 .news-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -41,6 +41,7 @@
 }
 
 .prev-news {
+  font-size: 0.7rem;
   border: 1px solid var(--green-medium);
   color: var(--green-medium);
   margin-right: 0rem;
@@ -52,6 +53,7 @@
 }
 
 .next-news {
+  font-size: 0.7rem;
   border: 1px solid var(--green-medium);
   color: var(--green-medium);
   padding: 0rem 0.9rem;
@@ -60,6 +62,7 @@
   font-weight: bold;
   margin-left: 5px;
 }
+/* //--------- */
 
 .prev-news:hover,
 .next-news:hover {
@@ -77,6 +80,7 @@
 .control-btn-news {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .readMoreNews a span {
