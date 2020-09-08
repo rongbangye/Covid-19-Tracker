@@ -95,20 +95,59 @@
           </div>
         </div>
 
-        <div class="row d-flex centeral-container my-3">
-          <div class="col-md-7">
-            <div class="row col-sm-12 p-1">
-              <h5 class="pl-3">Affected Areas</h5>
-            </div>
+      <div class="row main-container">
+        <div class="col-xl-9 col-sm-12" id="col-one">
+          <div class="row card-container total-container">
+            <div class="card d-flex">
+              <span>Total Death<i class="fas fa-caret-up"></i> </span>
 
-            <!-- Added Map -->
-            <!-- <div class="chart">
-                <div id="curve_chart" style="width: 490px; height: 244px"></div>
-              </div> -->
-            <div id="map"></div>
+              <h5 id="total-death">34,421</h5>
+            </div>
+            <div class="card">
+              <span>Active Cases<i class="fas fa-caret-up"></i></span>
+              <h5 id="active-cases">540,421</h5>
+            </div>
+            <div class="card">
+              <span>Total Recovered<i class="fas fa-caret-down"></i></span>
+              <h5 id="recovered">124,421</h5>
+            </div>
+            <div class="card">
+              <span>Total Cases<i class="fas fa-caret-up"></i></span>
+              <h5 id="total-cases">788,421</h5>
+            </div>
           </div>
-          <div class="col -md-5 top-countries d-flex">
-            <h5 class="p-1">Top-Countries</h5>
+          <div class="row card-container today-container mt-3">
+            <div class="card">
+              <span>Today Death </span>
+
+              <h5 id="today-death">34,421</h5>
+            </div>
+            <div class="card">
+              <span>Today Cases</span>
+              <h5 id="today-cases">540,421</h5>
+            </div>
+            <div class="card">
+              <span>Today Recovered</span>
+              <h5 id="today-recovered">124,421</h5>
+            </div>
+            <div class="card">
+              <span>Total Tests</span>
+              <h5 id="total-tests">788,421</h5>
+            </div>
+          </div>
+
+          <div class="row d-flex centeral-container my-3">
+            <div class="col-md-7">
+              <div class="row col-sm-12 p-1">
+                <h5 class="pl-3">Affected Areas</h5>
+              </div>
+
+              <!-- Added Map -->
+
+              <div id="map"></div>
+            </div>
+            <div class="col -md-5 top-countries d-flex">
+              <h5 class="p-1">Top-Countries</h5>
 
             <!-- Add the Highest Affected Country -->
             <div class="card-top top-country-first"></div>

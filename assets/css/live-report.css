@@ -39,6 +39,7 @@
 
 #live-reports-list li {
   width: -webkit-fill-available;
+  cursor: pointer;
 }
 
 #live-reports-list::-webkit-scrollbar {

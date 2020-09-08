@@ -5,6 +5,11 @@ var totalCasesEl = document.querySelector("#total-cases");
 var recoveredEl = document.querySelector("#recovered");
 var totalDeathEl = document.querySelector("#total-death");
 
+var todayCasesEl = document.querySelector("#today-cases");
+var totalTestsEl = document.querySelector("#total-tests");
+var todayRecoveredEl = document.querySelector("#today-recovered");
+var todayDeathEl = document.querySelector("#today-death");
+
 var countryInputName = document.querySelector("#country-input");
 var searchBtn = document.querySelector("#search-btn");
 
@@ -52,7 +57,7 @@ var getCountryData = function (country) {
       if (data.message) {
         openModal(data.message);
       }
-
+      console.log(data);
       // if there is response display data
       displayDataToTheUI(data);
     });
@@ -65,6 +70,11 @@ var displayDataToTheUI = function (countryData) {
   recoveredEl.textContent = numberWithCommas(countryData.recovered);
   totalCasesEl.textContent = numberWithCommas(countryData.cases);
   totalDeathEl.textContent = numberWithCommas(countryData.deaths);
+
+  todayCasesEl.textContent = numberWithCommas(countryData.todayCases);
+  todayRecoveredEl.textContent = numberWithCommas(countryData.todayRecovered);
+  totalTestsEl.textContent = numberWithCommas(countryData.tests);
+  todayDeathEl.textContent = numberWithCommas(countryData.todayDeaths);
 };
 
 var formSubmitHandler = function (event) {
