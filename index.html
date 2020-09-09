@@ -30,23 +30,21 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand mr-5" href="#">
       <i class="fas fa-virus"></i>Covid-Tracker</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form id="search-btn" class="form-inline ml-5 my-2 my-md-0">
-        <input class="form-control px-5" id="country-input" type="search" placeholder="Country" aria-label="Search" />
+
+    <div class="navbar-items" id="navbarSupportedContent">
+      <form id="search-btn" class="form-inline">
+        <input class="form-control" id="country-input" type="search" placeholder="Country" aria-label="Search" />
         <button class="btn-search my-2 my-sm-0" type="submit">Search</button>
       </form>
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav d-none d-lg-flex">
         <li class="nav-item mx-3">
-          <a class="nav-link" href="#news">News</a>
+          <a class="nav-link" href="#">News</a>
         </li>
 
         <li class="nav-item mx-3">
-          <a class="nav-link" href="#symptoms">Symptoms</a>
+          <a class="nav-link" href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+            target="_blank">Symptoms</a>
         </li>
       </ul>
     </div>
@@ -129,22 +127,19 @@
           <div class="col-md-5 top-countries d-flex">
             <h5 class="p-1">Top-Countries</h5>
 
-            <div class="top-countries-container">
-              <!-- Add the Highest Affected Country -->
-              <div class="card-top top-country-first"></div>
+            <!-- Add the Highest Affected Country -->
+            <div class="card-top top-country-first"></div>
 
-              <!-- Add the Second Highest Affected Country -->
-              <div class="card-top top-country-second"></div>
+            <!-- Add the Second Highest Affected Country -->
+            <div class="card-top top-country-second"></div>
 
-              <!-- Add the Second Highest Affected Country -->
-              <div class="card-top top-country-third"></div>
-
-            </div>
+            <!-- Add the Second Highest Affected Country -->
+            <div class="card-top top-country-third"></div>
           </div>
         </div>
 
         <div class="row news-symptoms-container">
-          <div id="news" class="col news">
+          <div class="col news">
             <div class="btn btn-news">News</div>
 
             <div class="news-main-container">
@@ -163,8 +158,9 @@
               </div>
             </div>
           </div>
-          <div id="symptoms" class="col symptoms">
-            <div class="btn btn-symptoms">Symptoms</div>
+          <div class="col symptoms">
+            <a class="btn btn-symptoms" href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+              target="_blank">Symptoms</a>
             <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cough.jpg"
                 style="color: red; height: 170px" /></a>
             <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cold.jpg"
@@ -203,16 +199,25 @@
           </div>
         </div>
         <div class="row ratio-recovery">
-          <h5>Ratio of recovery - Global</h5>
+          <h6>Global Ratio Of Recovery</h6>
           <div class="circle-recovery"></div>
-          <p>
-            Affected -<span class="affected-global"></span> &nbsp;
-            Recovered-<span class="recovered-global"></span>
-          </p>
-          <p>
-            Today Cases -<span class="today-cases-global"></span> &nbsp; Today
-            Recovered-<span class="today-recovered-global"></span>
-          </p>
+          <div class="global-data-container">
+
+            <div class="global-total">
+
+              <hr>Total - Affected <span class="affected-global"></span> <br>
+              <hr>
+              Total Recovered <span class="recovered-global"></span>
+              <hr>
+            </div>
+            <div class="global-today">
+              <hr>Today New Cases <span class="today-cases-global"></span><br>
+              <hr>
+              Today Recovered <span class="today-recovered-global"></span>
+              <hr>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
