@@ -11,21 +11,21 @@ function initMap() {
       {
         featureType: "landscape.natural",
         elementType: "geometry",
-        stylers: [{ color: "#fbc6c6" }],
+        stylers: [{ color: "#fbc6c6" }]
       },
       {
         featureType: "water",
         elementType: "geometry.fill",
-        stylers: [{ color: "#f9f3f3" }],
-      },
-    ],
+        stylers: [{ color: "#f9f3f3" }]
+      }
+    ]
   });
 
   //
   fetch("https://www.trackcorona.live/api/countries")
-    .then((respones) => respones.json())
-    .then((countries) => {
-      countries.data.map((country) => {
+    .then(respones => respones.json())
+    .then(countries => {
+      countries.data.map(country => {
         addMarker({
           coords: { lat: country.latitude, lng: country.longitude },
           info: `
@@ -36,7 +36,7 @@ function initMap() {
             <p style="margin-top: 0">confirmed cases: <strong>${numberWithCommas(
               country.confirmed
             )}</strong></p>
-          `,
+          `
         });
       });
     });
@@ -47,20 +47,20 @@ function initMap() {
         "https://cdn.iconscout.com/icon/premium/png-256-thumb/covid-19-2313096-1938299.png", // url
       scaledSize: new google.maps.Size(40, 40), // scaled size
       origin: new google.maps.Point(0, 0), // origin
-      anchor: new google.maps.Point(0, 0), // anchor
+      anchor: new google.maps.Point(0, 0) // anchor
     };
     // Add Marker
     var marker = new google.maps.Marker({
       position: props.coords,
       map: map,
-      icon: icon,
+      icon: icon
     });
 
     var infoWindow = new google.maps.InfoWindow({
-      content: `<h1>${props.info}</h1>`,
+      content: `<h1>${props.info}</h1>`
     });
 
-    marker.addListener("click", function () {
+    marker.addListener("click", function() {
       infoWindow.open(map, marker);
     });
   }
@@ -72,8 +72,8 @@ function fetchToCountries() {
   const topThree = document.querySelector(".top-country-third");
 
   fetch("https://disease.sh/v3/covid-19/countries")
-    .then((response) => response.json())
-    .then((countries) => {
+    .then(response => response.json())
+    .then(countries => {
       sortTopCountries = countries.sort((a, b) => {
         return b["cases"] - a["cases"];
       });
@@ -86,8 +86,8 @@ function fetchToCountries() {
           topThreeCountries[0].recovered,
           topThreeCountries[0].cases
         )}%</div>
-        <div>
-        <h6>${topThreeCountries[0].country}</h6>
+        <div class="top-country-info">
+        <h4>${topThreeCountries[0].country}</h4>
         <p>Affected -<span>${kFormatter(
           topThreeCountries[0].cases,
           2
@@ -103,8 +103,8 @@ function fetchToCountries() {
           topThreeCountries[1].recovered,
           topThreeCountries[1].cases
         )}%</div>
-        <div>
-        <h6>${topThreeCountries[1].country}</h6>
+        <div class="top-country-info">
+        <h4>${topThreeCountries[1].country}</h4>
         <p>Affected -<span>${kFormatter(
           topThreeCountries[1].cases,
           2
@@ -120,8 +120,8 @@ function fetchToCountries() {
           topThreeCountries[2].recovered,
           topThreeCountries[2].cases
         )}%</div>
-        <div>
-        <h6>${topThreeCountries[2].country}</h6>
+        <div class="top-country-info">
+        <h4>${topThreeCountries[2].country}</h4>
         <p>Affected -<span>${kFormatter(
           topThreeCountries[2].cases,
           2
