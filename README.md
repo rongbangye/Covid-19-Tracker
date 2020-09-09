@@ -30,9 +30,11 @@ fully responive in all media-screen sizes;
 
 # <h2 class="text-center" style="color:blue;">EXTRA LARGE SCREEN SIZE</h2>
 
+<div class="bg-dark mx-5">
 <img src="./assets/img/Screenshot-1.png" alt="extra-large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-2.png" alt="extra-large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-3.png" alt="extra-large-screen app" style="height:500px"/>
+</div>
 
 # LARGE SCREEN SIZE
 
@@ -41,9 +43,9 @@ fully responive in all media-screen sizes;
 
 # MEDIUM SCREEN SIZE
 
-<img src="./assets/img/Screenshot-6.png" alt="medium-screen app" style="height:500px"/>
-<img src="./assets/img/Screenshot-7.png" alt="medium-screen app" style="height:500px"/>
-<img src="./assets/img/Screenshot-8.png" alt="medium-screen app" style="height:500px"/>
+<img src="./assets/img/Screenshot-6.png" alt="medium-screen app" style="height:500px"/><hr>
+<img src="./assets/img/Screenshot-7.png" alt="medium-screen app" style="height:500px"/><hr>
+<img src="./assets/img/Screenshot-8.png" alt="medium-screen app" style="height:500px"/><hr>
 
 # SMALL SCREEN SIZE
 
@@ -54,11 +56,11 @@ fully responive in all media-screen sizes;
 
 # EXTRA-SMALL SCREEN SIZE
 
-<img src="./assets/img/Screenshot-13.png" alt="extra-small-screen app" style="height:800px"/>
-<img src="./assets/img/Screenshot-14.png" alt="extra-small-screen app" style="height:800px"/>
-<img src="./assets/img/Screenshot-15.png" alt="extra-small-screen app" style="height:800px"/>
-<img src="./assets/img/Screenshot-16.png" alt="extra-small-screen app" style="height:800px"/>
-<img src="./assets/img/Screenshot-17.png" alt="extra-small-screen app" style="height:800px"/>
+<img src="./assets/img/Screenshot-13.png" alt="extra-small-screen app" style="height:300px"/>
+<img src="./assets/img/Screenshot-14.png" alt="extra-small-screen app" style="height:300px"/>
+<img src="./assets/img/Screenshot-15.png" alt="extra-small-screen app" style="height:300px"/>
+<img src="./assets/img/Screenshot-16.png" alt="extra-small-screen app" style="height:300px"/>
+<img src="./assets/img/Screenshot-17.png" alt="extra-small-screen app" style="height:300px"/>
 
 ## Contribution
 
