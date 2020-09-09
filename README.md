@@ -28,33 +28,33 @@ https://rongbangye.github.io/Covid-19-Tracker/
 
 fully responive in all media-screen sizes;
 
-# <h2 class="text-center" style="color:blue;">EXTRA LARGE SCREEN SIZE</h2>
+### EXTRA LARGE SCREEN SIZE
 
-<div class="bg-dark mx-5">
+
 <img src="./assets/img/Screenshot-1.png" alt="extra-large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-2.png" alt="extra-large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-3.png" alt="extra-large-screen app" style="height:500px"/>
-</div>
 
-# LARGE SCREEN SIZE
+
+### LARGE SCREEN SIZE
 
 <img src="./assets/img/Screenshot-4.png" alt="large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-5.png" alt="large-screen app" style="height:500px"/>
 
-# MEDIUM SCREEN SIZE
+### MEDIUM SCREEN SIZE
 
 <img src="./assets/img/Screenshot-6.png" alt="medium-screen app" style="height:500px"/><hr>
 <img src="./assets/img/Screenshot-7.png" alt="medium-screen app" style="height:500px"/><hr>
 <img src="./assets/img/Screenshot-8.png" alt="medium-screen app" style="height:500px"/><hr>
 
-# SMALL SCREEN SIZE
+### SMALL SCREEN SIZE
 
 <img src="./assets/img/Screenshot-9.png" alt="small-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-10.png" alt="small-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-11.png" alt="small-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-12.png" alt="small-screen app" style="height:500px"/>
 
-# EXTRA-SMALL SCREEN SIZE
+### EXTRA-SMALL SCREEN SIZE
 
 <img src="./assets/img/Screenshot-13.png" alt="extra-small-screen app" style="height:300px"/>
 <img src="./assets/img/Screenshot-14.png" alt="extra-small-screen app" style="height:300px"/>
