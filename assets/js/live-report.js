@@ -51,7 +51,21 @@ fetch("https://disease.sh/v3/covid-19/countries")
     }
 
     nextTab.addEventListener("click", () => {
-      page == countryList.length - 10 ? (page = 0) : (page += 10);
+      // disable or enable pre and next button when reached the last or first page
+      if (page == 0) {
+        console.log(page);
+        previousTab.classList.remove("disable");
+      } else if (page >= 199) {
+        console.log(page);
+        nextTab.classList.add("disable");
+        previousTab.classList.remove("disable");
+      } else {
+        nextTab.classList.remove("disable");
+      }
+
+      // click next page
+      page == countryList.length - 10 ? page == 0 : (page += 10);
+
       liveReports.innerHTML = "";
       for (let i = page; i < page + 10; i++) {
         liveReports.appendChild(countryList[i]);
@@ -59,7 +73,19 @@ fetch("https://disease.sh/v3/covid-19/countries")
     });
 
     previousTab.addEventListener("click", () => {
+      // disable or enable pre and next button when reached the last or first page
+      if (page == 10) {
+        previousTab.classList.add("disable");
+      } else if (page >= 199) {
+        nextTab.classList.add("disable");
+        previousTab.classList.remove("disable");
+      } else {
+        nextTab.classList.remove("disable");
+      }
+
+      // click previous page
       page == 0 ? (page = countryList.length - 10) : (page -= 10);
+
       liveReports.innerHTML = "";
       for (let i = page; i < page + 10; i++) {
         liveReports.appendChild(countryList[i]);

@@ -81,8 +81,15 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  margin-top: 10px;
 }
 
 .readMoreNews a span {
   margin-left: 0;
+}
+
+@media only screen and (max-width: 825px) {
+  .news-info {
+    flex-direction: column;
+  }
 }

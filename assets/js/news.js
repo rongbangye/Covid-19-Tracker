@@ -39,6 +39,13 @@ function getNews() {
       }
 
       nextNews.addEventListener("click", () => {
+        // disable or enable next and previous button when reach on first or last page
+        page == 0
+          ? prevNews.classList.remove("disable")
+          : page == 28
+          ? nextNews.classList.add("disable")
+          : nextNews.classList.remove("disable");
+
         page == newsList.length - 1 ? (page = 0) : (page += 1);
         newsDetail.innerHTML = "";
         for (let i = page; i < page + 1; i++) {
@@ -47,6 +54,11 @@ function getNews() {
       });
 
       prevNews.addEventListener("click", () => {
+        // disable or enable next and previous button when reach on first or last page
+        page == 1
+          ? prevNews.classList.add("disable")
+          : nextNews.classList.remove("disable");
+
         page == 0 ? (page = newsList.length - 1) : (page -= 1);
         newsDetail.innerHTML = "";
         for (let i = page; i < page + 1; i++) {
