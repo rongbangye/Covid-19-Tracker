@@ -167,8 +167,7 @@ body {
   padding: 0.3rem 1rem;
   border: 1px solid var(--gray-light);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: space-between; */
   font-size: 0.9rem;
 }
 .card-top:last-child {
