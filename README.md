@@ -17,7 +17,7 @@ User has the ability to search for any country in the world or track the live -r
 - JAVASCRIPT
 - OpenWeather-Api
 - Google-map-Api
-- Coronanews-Api (https://coronews.iamharsh.dev/)
+- Smartable AI-Api (https://developer.smartable.ai/)
 - Disease-corona - (https://disease.sh/docs/#/COVID-19%3A%20Worldometers)
 
 ## Website
