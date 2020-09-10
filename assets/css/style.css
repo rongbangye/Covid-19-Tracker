@@ -167,7 +167,8 @@ body {
   padding: 0.3rem 1rem;
   border: 1px solid var(--gray-light);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   font-size: 0.9rem;
 }
 .card-top:last-child {
@@ -183,6 +184,10 @@ body {
   padding: 1.1rem;
   margin-right: 1rem;
   line-height: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .circle-one {
   color: rgb(247, 68, 68);
