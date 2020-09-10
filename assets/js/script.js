@@ -44,6 +44,8 @@ function outsideModalClick(e) {
   }
 }
 
+//----- FUNCTION- FETCH COUNTRY DATA  --------------------------------------------
+
 var getCountryData = function (country) {
   var urlCountry =
     "https://disease.sh/v3/covid-19/countries/" +
@@ -57,12 +59,14 @@ var getCountryData = function (country) {
       if (data.message) {
         openModal(data.message);
       }
-      console.log(data);
+
       // if there is response display data
       displayDataToTheUI(data);
     });
   });
 };
+
+//----- FUNCTION- DISPLAY DATA TO THE UI --------------------------------------------
 
 var displayDataToTheUI = function (countryData) {
   // Display all the values to the UI
@@ -77,12 +81,15 @@ var displayDataToTheUI = function (countryData) {
   todayDeathEl.textContent = numberWithCommas(countryData.todayDeaths);
 };
 
+//----- FUNCTION- SUBMIT FORM  --------------------------------------------
+
 var formSubmitHandler = function (event) {
   event.preventDefault();
   // get value from input element
   var countryName = countryInputName.value.trim();
 
   if (countryName) {
+    localStorage.setItem("searchedCountry", countryName);
     getCountryData(countryName);
 
     countryInputName.value = "";
@@ -91,4 +98,23 @@ var formSubmitHandler = function (event) {
   }
 };
 
+//----- FUNCTION- LOAD PAGE ------------------------------------------------
+
+var loadPage = function () {
+  // get the last searched country name from localstorage
+  var lastSearchedCountry = localStorage.getItem("searchedCountry");
+
+  // get the data for the last searched country
+  if (lastSearchedCountry) {
+    getCountryData(lastSearchedCountry);
+  }
+  // if there was no searched country before search for USA
+  getCountryData("usa");
+};
+
+
+loadPage();
+
 searchBtn.addEventListener("submit", formSubmitHandler);
+
+// AIzaSyC79QiLL6Ylj2jlS-iqNyJF3Cq2WdaquTc
