@@ -7,17 +7,17 @@ function getNews() {
     method: "GET",
     headers: {
       "Cache-Control": "no-cache",
-      "Subscription-Key": "9d6534c138914eabb775e43b05f174cd"
-    }
+      "Subscription-Key": "9d6534c138914eabb775e43b05f174cd",
+    },
   })
-    .then(response => response.json())
-    .then(newsCovid => {
+    .then((response) => response.json())
+    .then((newsCovid) => {
       const newsDetail = document.querySelector(".news-detail");
 
       let page = 0;
       let newsList = [];
 
-      newsCovid.news.forEach(news => {
+      newsCovid.news.forEach((news) => {
         let liveCountryEL = document.createElement("li");
 
         liveCountryEL.classList = "news-detail-li";
