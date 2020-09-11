@@ -10,7 +10,7 @@ function getGlobalData() {
         ".today-recovered-global"
       );
 
-      console.log(global);
+   
       const circleRecoveryRatio = makeNumberToPercentage(
         global.recovered,
         global.cases

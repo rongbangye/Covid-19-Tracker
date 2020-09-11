@@ -4,10 +4,13 @@ const previousTab = document.querySelector(".prev");
 const nextTab = document.querySelector(".next");
 const liveReports = document.querySelector("#live-reports-list");
 
+// save all countries name
+var countryNamesArray = [];
+
 const fetchTopCountries = () => {
   fetch("https://disease.sh/v3/covid-19/countries")
-    .then(response => response.json())
-    .then(countries => {
+    .then((response) => response.json())
+    .then((countries) => {
       sortTopCountries = countries.sort((a, b) => {
         return b["cases"] - a["cases"];
       });
@@ -15,7 +18,7 @@ const fetchTopCountries = () => {
       let countryList = [];
       let page = 0;
 
-      sortTopCountries.forEach(country => {
+      sortTopCountries.forEach((country) => {
         // if (country) {
         //   hideSpinner();
         // }
@@ -35,9 +38,10 @@ const fetchTopCountries = () => {
           </div>
         `;
         countryList.push(liveCountryEL);
+        countryNamesArray.push(country.country);
 
         //     fetch data if user clicks live country
-        var getElement = function(event) {
+        var getElement = function (event) {
           // get country name from clicked element
           var countryClicked =
             event.currentTarget.children[0].children[0].textContent;
