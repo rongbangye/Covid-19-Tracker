@@ -53,17 +53,17 @@ var getCountryData = function (country) {
     "?yesterday=false&strict=false";
 
   // fetch data for each country
-  fetch(urlCountry).then(response => {
-    response.json().then(data => {
+  fetch(urlCountry).then((response) => {
+    response.json().then((data) => {
       // if there is no response open modal with the error message
       if (data.message) {
         openModal(data.message);
       }
-
+      countryInputName.value = "";
       // display spinner when click the search button
       document.querySelector(".spinner").style.display = "";
       // Delay a half second to show the loading spinner
-      setTimeout(function() {
+      setTimeout(function () {
         // if successfully load data, hide the spinner
         if (data) {
           document.querySelector(".spinner").style.display = "none";
@@ -101,7 +101,7 @@ var formSubmitHandler = function (event) {
     localStorage.setItem("searchedCountry", countryName);
     getCountryData(countryName);
 
-    countryInputName.value = "";
+    // countryInputName.value = "";
   } else {
     openModal("Input field can not be empty");
   }
