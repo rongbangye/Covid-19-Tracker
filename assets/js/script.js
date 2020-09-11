@@ -44,27 +44,36 @@ function outsideModalClick(e) {
   }
 }
 
-var getCountryData = function (country) {
+var getCountryData = function(country) {
   var urlCountry =
     "https://disease.sh/v3/covid-19/countries/" +
     country +
     "?yesterday=false&strict=false";
 
   // fetch data for each country
-  fetch(urlCountry).then((response) => {
-    response.json().then((data) => {
+  fetch(urlCountry).then(response => {
+    response.json().then(data => {
       // if there is no response open modal with the error message
       if (data.message) {
         openModal(data.message);
       }
-      console.log(data);
-      // if there is response display data
-      displayDataToTheUI(data);
+
+      // display spinner when click the search button
+      document.querySelector(".spinner").style.display = "";
+      // Delay a half second to show the loading spinner
+      setTimeout(function() {
+        // if successfully load data, hide the spinner
+        if (data) {
+          document.querySelector(".spinner").style.display = "none";
+        }
+        // if there is response display data
+        displayDataToTheUI(data);
+      }, 500);
     });
   });
 };
 
-var displayDataToTheUI = function (countryData) {
+var displayDataToTheUI = function(countryData) {
   // Display all the values to the UI
   activeCasesEl.textContent = numberWithCommas(countryData.active);
   recoveredEl.textContent = numberWithCommas(countryData.recovered);
@@ -77,7 +86,7 @@ var displayDataToTheUI = function (countryData) {
   todayDeathEl.textContent = numberWithCommas(countryData.todayDeaths);
 };
 
-var formSubmitHandler = function (event) {
+var formSubmitHandler = function(event) {
   event.preventDefault();
   // get value from input element
   var countryName = countryInputName.value.trim();

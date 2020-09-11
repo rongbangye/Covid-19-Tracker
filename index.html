@@ -76,10 +76,16 @@
 
     <div class="row main-container">
       <div class="col-xl-9 col-sm-12" id="col-one">
+        <!-- Add Loading Spinner -->
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border text-danger spinner" style="display: none; width: 3rem; height: 3rem;">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+
         <div class="row card-container total-container">
           <div class="card d-flex">
             <span>Total Death<i class="fas fa-caret-up"></i> </span>
-
             <h5 id="total-death">34,421</h5>
           </div>
           <div class="card">

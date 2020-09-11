@@ -7,7 +7,7 @@ function getNews() {
     method: "GET",
     headers: {
       "Cache-Control": "no-cache",
-      "Subscription-Key": "9d6534c138914eabb775e43b05f174cd"
+      "Subscription-Key": "3009d4ccc29e4808af1ccc25c69b4d5d"
     }
   })
     .then(response => response.json())

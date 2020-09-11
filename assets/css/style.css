@@ -88,6 +88,14 @@ body {
   height: 100vh;
   margin: 0 2rem;
 }
+
+.spinner {
+  position: absolute;
+  top: 10%;
+  margin-top: -0.6rem;
+  z-index: 100;
+}
+
 #col-one {
   border-radius: 0.3rem;
   width: 100%;
@@ -333,6 +341,7 @@ body {
 #live-reports-list {
   padding-right: 0 !important;
 }
+
 .live-country .tabs {
   font-size: 0.7rem;
   margin-left: 2rem;
@@ -415,6 +424,9 @@ body {
   }
 }
 @media only screen and (max-width: 800px) {
+  .spinner {
+    top: 9%;
+  }
   .card-top {
     padding: 0.3rem 1rem;
     justify-content: flex-start;
@@ -447,8 +459,15 @@ body {
   .top-countries {
     margin-top: 3.5rem;
   }
+  .spinner {
+    top: 7%;
+  }
 }
 @media only screen and (max-width: 660px) {
+  .spinner {
+    top: 6.5%;
+  }
+
   .circle {
     margin: 0 2rem;
   }

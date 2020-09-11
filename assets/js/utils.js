@@ -31,3 +31,8 @@ function makeNumberToPercentage(a, b) {
 function truncateString(str, num) {
   return str.length > num ? str.slice(0, num) + "..." : str;
 }
+
+// Function to hide the Spinner
+function hideSpinner() {
+  document.querySelector(".spinner").style.display = "none";
+}
