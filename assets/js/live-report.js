@@ -9,8 +9,8 @@ var countryNamesArray = [];
 
 const fetchTopCountries = () => {
   fetch("https://disease.sh/v3/covid-19/countries")
-    .then((response) => response.json())
-    .then((countries) => {
+    .then(response => response.json())
+    .then(countries => {
       sortTopCountries = countries.sort((a, b) => {
         return b["cases"] - a["cases"];
       });
@@ -18,11 +18,7 @@ const fetchTopCountries = () => {
       let countryList = [];
       let page = 0;
 
-      sortTopCountries.forEach((country) => {
-        // if (country) {
-        //   hideSpinner();
-        // }
-        // create <li> element
+      sortTopCountries.forEach(country => {
         let liveCountryEL = document.createElement("li");
         liveCountryEL.innerHTML += `
           <div class="countryLiveReport p-2">
@@ -41,7 +37,7 @@ const fetchTopCountries = () => {
         countryNamesArray.push(country.country);
 
         //     fetch data if user clicks live country
-        var getElement = function (event) {
+        var getElement = function(event) {
           // get country name from clicked element
           var countryClicked =
             event.currentTarget.children[0].children[0].textContent;
