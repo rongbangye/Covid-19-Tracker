@@ -38,7 +38,7 @@ function getNews() {
         // disable or enable next and previous button when reach on first or last page
         page == 0
           ? prevNews.classList.remove("disable")
-          : page == 99
+          : page == 30
           ? nextNews.classList.add("disable")
           : nextNews.classList.remove("disable");
 
