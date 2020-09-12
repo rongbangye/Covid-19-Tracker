@@ -45,7 +45,7 @@ body {
 }
 .navbar-brand {
   font-weight: bold;
-  color: rgb(62, 12, 128) !important;
+  /* color: rgb(12, 128, 41) !important; */
   color: rgb(29, 0, 0) !important;
   /* font-family: "nuinto"; */
 }
@@ -75,6 +75,7 @@ body {
   font-size: 0.9rem;
   width: 20rem !important;
   border: none;
+  padding-top:.5rem !important;
 }
 .form-control:focus,
 .form-control:active {
@@ -96,6 +97,7 @@ body {
   box-shadow: 0px 0px 8px 1px rgb(218, 141, 141);
   box-shadow: 0px 0px 8px 1px rgb(179, 179, 179);
   background-color: #fff;
+  text-align: left;
 }
 
 .btn-search,
@@ -344,17 +346,21 @@ body {
 }
 .circle-recovery {
   /* display: none; */
+  
+  border: 4px solid rgba(129,230,191,1);
   text-align: center;
   justify-content: center;
   font-size: 0.9rem;
   font-weight: bold;
-  color: rgb(9, 168, 115);
+  color: rgb(9, 78, 53);
   height: 8rem;
   width: 8rem;
   border-radius: 50%;
-  border: 1px solid var(--gray-light);
-  padding: 3rem;
-  background: rgb(255, 255, 255);
+  /* border: 1px solid var(--gray-light); */
+  padding: 2.8rem;
+  background: rgb(129,230,191);
+  background: radial-gradient(circle, rgba(129,230,191,1) 38%, rgba(255,255,255,1) 38%);
+  /* background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 34%,
@@ -362,15 +368,7 @@ body {
     rgb(191, 243, 226) 37%,
     rgb(181, 248, 222) 38%,
     rgba(255, 255, 255, 1) 85%
-  ); /* background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 34%,
-    rgba(106, 218, 173, 0.808) 34%,
-    rgba(255, 255, 255, 1) 85%,
-    rgb(255, 255, 255) 94%,
-    rgb(255, 255, 255) 100%
-  ); */
+  );  */
   line-height: 1.8rem;
 }
 .global-data-container {
