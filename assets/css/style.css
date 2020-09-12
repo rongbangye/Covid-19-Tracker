@@ -180,8 +180,8 @@ body {
   margin-bottom: 1rem !important;
   min-height: 8vh;
 }
-.country-name{
-  font-weight:bold;
+.country-name {
+  font-weight: bold;
 }
 .flag-and-name {
   display: flex;
@@ -278,25 +278,31 @@ hr {
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-.top-countries h4 {
+/* .top-countries h4 {
   font-size: 0.9rem !important;
   font-weight: 600;
+} */
+.top-countries-container {
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 87%;
 }
 .card-top {
   background-color: #fff;
   border-radius: 0.3rem;
-  height: 100%;
+  height: 30%;
   margin-bottom: 1rem;
   padding: 0.3rem 1rem;
   border: 1px solid rgb(223, 223, 223);
   display: flex;
-  /* justify-content: space-between; */
+  flex-direction: row;
+  justify-content: flex-start;
   font-size: 0.9rem;
 }
 .top-countries p {
-  font-weight: 500 !important;
+  /* font-weight: 500 !important; */
   color: rgb(88, 88, 88);
 }
 .card-top:last-child {
@@ -497,14 +503,52 @@ hr {
   margin-top: 0.5rem;
   font-family: "loto", sans-serif;
   background-color: var(--gray-light);
-   
-  background-color: rgb(235, 243, 245);;
+
+  background-color: rgb(235, 243, 245);
 }
 .countryLiveReport:hover {
   background-color: rgb(247, 247, 247);
 }
+.circle-recovery {
+  height: 12rem;
+  width: 12rem;
+  padding: 4.9rem;
+  margin: 3rem 0rem;
+  font-size: 1.2rem;
+}
+.ratio-recovery h6 {
+  font-size: 1.3rem;
+}
+.global-data-container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem 1rem; */
+  font-size: 1rem;
+}
 
 /*================== MEDIA-QUERIES-================================================== */
+@media only screen and (max-width: 2700px) {
+  .card-top {
+    align-items: center;
+  }
+  .top-countries h4 {
+    font-size: 1.3rem;
+  }
+  .top-countries p {
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .circle {
+    height: 5rem;
+    width: 5rem;
+  }
+  .top-country-info p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+}
 
 @media only screen and (max-width: 1299px) {
   .top-countries h4 {
@@ -556,6 +600,10 @@ hr {
   }
 }
 @media only screen and (max-width: 800px) {
+  .top-countries h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
   .spinner {
     top: 9%;
   }
@@ -586,6 +634,27 @@ hr {
   }
 }
 @media only screen and (max-width: 769px) {
+  .top-countries-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row;
+  }
+  .card-top {
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+  }
+  .circle {
+    margin-right: 0;
+  }
+  .top-country-info {
+    padding-top: 10px;
+  }
+  .top-country-info p {
+    margin-bottom: 0;
+  }
   .top-countries h4 {
     font-size: 1rem;
   }
@@ -683,6 +752,20 @@ hr {
   }
 }
 @media only screen and (max-width: 564px) {
+  .top-countries-container {
+    flex-direction: column;
+  }
+  .card-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .top-country-info {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    text-align: start;
+  }
   .navbar {
     margin-bottom: 1.9rem !important;
     border-bottom-right-radius: 0rem;

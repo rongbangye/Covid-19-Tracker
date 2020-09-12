@@ -48,15 +48,15 @@ function outsideModalClick(e) {
 
 //----- FUNCTION- FETCH COUNTRY DATA  --------------------------------------------
 
-var getCountryData = function (country) {
+var getCountryData = function(country) {
   var urlCountry =
     "https://disease.sh/v3/covid-19/countries/" +
     country +
     "?yesterday=false&strict=false";
 
   // fetch data for each country
-  fetch(urlCountry).then((response) => {
-    response.json().then((data) => {
+  fetch(urlCountry).then(response => {
+    response.json().then(data => {
       // if there is no response open modal with the error message
       if (data.message) {
         openModal(data.message);
@@ -65,7 +65,7 @@ var getCountryData = function (country) {
       // display spinner when click the search button
       document.querySelector(".spinner").style.display = "";
       // Delay a half second to show the loading spinner
-      setTimeout(function () {
+      setTimeout(function() {
         // if successfully load data, hide the spinner
         if (data) {
           document.querySelector(".spinner").style.display = "none";
@@ -79,8 +79,7 @@ var getCountryData = function (country) {
 
 //----- FUNCTION- DISPLAY DATA TO THE UI --------------------------------------------
 
-var displayDataToTheUI = function (countryData) {
-
+var displayDataToTheUI = function(countryData) {
   // Display all the values to the UI
   activeCasesEl.textContent = numberWithCommas(countryData.active);
   recoveredEl.textContent = numberWithCommas(countryData.recovered);
@@ -159,7 +158,7 @@ var displayDataToTheUI = function (countryData) {
 
 //----- FUNCTION- SUBMIT FORM  --------------------------------------------
 
-var formSubmitHandler = function (event) {
+var formSubmitHandler = function(event) {
   event.preventDefault();
   // get value from input element
   var countryName = countryInputName.value.trim();
@@ -176,7 +175,7 @@ var formSubmitHandler = function (event) {
 
 //----- FUNCTION- LOAD PAGE ------------------------------------------------
 
-var loadPage = function () {
+var loadPage = function() {
   // get the last searched country name from localstorage
   var lastSearchedCountry = localStorage.getItem("searchedCountry");
 
@@ -193,10 +192,9 @@ loadPage();
 searchBtn.addEventListener("submit", formSubmitHandler);
 
 // Execute a function when the user releases a key on the keyboard
-countryInputName.addEventListener("keyup", function (event) {
+countryInputName.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
-  
     formSubmitHandler(event);
     // autocompleteItems.textContent="";
   }
@@ -209,7 +207,7 @@ function autocomplete(inp, arr) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function (e) {
+  inp.addEventListener("input", function(e) {
     var a,
       b,
       i,
@@ -238,7 +236,7 @@ function autocomplete(inp, arr) {
         /*insert a input field that will hold the current array item's value:*/
         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
         /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener("click", function (e) {
+        b.addEventListener("click", function(e) {
           /*insert the value for the autocomplete text field:*/
           inp.value = this.getElementsByTagName("input")[0].value;
 
@@ -253,7 +251,7 @@ function autocomplete(inp, arr) {
     }
   });
   /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function (e) {
+  inp.addEventListener("keydown", function(e) {
     var x = document.getElementById(this.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
@@ -305,7 +303,7 @@ function autocomplete(inp, arr) {
     }
   }
   /*execute a function when someone clicks in the document:*/
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", function(e) {
     closeAllLists(e.target);
   });
 }
