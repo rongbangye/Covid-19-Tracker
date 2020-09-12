@@ -10,14 +10,14 @@ function getNews() {
       "Subscription-Key": "3009d4ccc29e4808af1ccc25c69b4d5d"
     }
   })
-    .then((response) => response.json())
-    .then((newsCovid) => {
+    .then(response => response.json())
+    .then(newsCovid => {
       const newsDetail = document.querySelector(".news-detail");
 
       let page = 0;
       let newsList = [];
 
-      newsCovid.news.forEach((news) => {
+      newsCovid.news.forEach(news => {
         let liveCountryEL = document.createElement("li");
 
         liveCountryEL.classList = "news-detail-li";
