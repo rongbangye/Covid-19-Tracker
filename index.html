@@ -12,11 +12,13 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    
 
   <!-- fontawsome - icons--- -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 
   <!------ google-fonts -------- -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
 
   <link
     href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap"
@@ -31,16 +33,16 @@
 <body>
   <!-------------- navigation bar ----------------------------------------- -->
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand mr-5" href="#">
-      <i class="fas fa-virus"></i>Covid-Tracker</a>
+    <a class="navbar-brand mr-5" href="./">
+      <i class="fas fa-virus"><p>Corona</p></i>COVID-TRACKER</a>
 
 
     <div class="navbar-items" id="navbarSupportedContent">
       <form id="search-btn" class="form-inline" autocomplete="off">
         <div class="autocomplete">
-          <input class="form-control" id="country-input" type="text" placeholder="Country" aria-label="Search" /></div>
+          <input class="form-control" id="country-input" type="text" placeholder="Country" aria-label="Search" /><span class="icon-search d-block d-md-none"><i class="fas fa-search"></i></span></div>
         <!-- <input type="submit"> -->
-        <button class="btn-search my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn-search my-2 my-sm-0 d-md-block d-none" type="submit">SEARCH</button>
       </form>
       <ul class="navbar-nav d-none d-lg-flex">
         <li class="nav-item mx-3">
@@ -125,9 +127,9 @@
         </div>
 
         <div class="row d-flex centeral-container my-3">
-          <div class="col-md-7">
+          <div class="col-md-7 p-0">
             <div class="row col-sm-12 p-1">
-              <h5 class="pl-3"></h5>
+              <h5 class="pl-3">Affected-Areas</h5>
             </div>
 
             <!-- Added Map -->
