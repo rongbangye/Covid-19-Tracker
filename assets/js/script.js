@@ -12,6 +12,8 @@ var todayDeathEl = document.querySelector("#today-death");
 
 var countryInputName = document.querySelector("#country-input");
 var searchBtn = document.querySelector("#search-btn");
+var countryName = document.querySelector("#country-name");
+var autocompleteItems = document.querySelector(".autocomplete-items");
 
 // ----  Modal DOM Elements---
 const modal = document.querySelector("#modal");
@@ -78,6 +80,7 @@ var getCountryData = function (country) {
 //----- FUNCTION- DISPLAY DATA TO THE UI --------------------------------------------
 
 var displayDataToTheUI = function (countryData) {
+
   // Display all the values to the UI
   activeCasesEl.textContent = numberWithCommas(countryData.active);
   recoveredEl.textContent = numberWithCommas(countryData.recovered);
@@ -88,6 +91,70 @@ var displayDataToTheUI = function (countryData) {
   todayRecoveredEl.textContent = numberWithCommas(countryData.todayRecovered);
   totalTestsEl.textContent = numberWithCommas(countryData.tests);
   todayDeathEl.textContent = numberWithCommas(countryData.todayDeaths);
+
+  var currentTImeAndDate = moment().format("ll");
+
+  // activePerOneMillion: 7606.97
+  // casesPerOneMillion: 20026
+  // criticalPerOneMillion: 43.29
+  // deathsPerOneMillion: 596
+
+  // recoveredPerOneMillion: 11822.86
+
+  // testsPerOneMillion: 274136
+
+  countryName.innerHTML = `
+          
+              <div class="flag-and-name mx-3 my-1 d-flex">
+                      <div>
+                      
+                      <img class=" mr-2" style="width: 48px; height:30px" src="${
+                        countryData.countryInfo.flag
+                      }" alt="flag">
+                     
+                      <span class="country-name">${countryData.country} 
+                      </span></div>
+                       
+                       
+
+
+                      <p class="date m-0"> ${currentTImeAndDate}</p>
+              </div>
+
+               <div  class="per-data d-flex"> 
+                   <div class="per-million mx-3 my-1">
+                    <h6>Per Million</h6>
+                    <p>Tests &nbsp; : ${numberWithCommas(
+                      countryData.testsPerOneMillion
+                    )}</p>
+                    <p>Death : ${numberWithCommas(
+                      countryData.deathsPerOneMillion
+                    )}</p>
+                    <p>Cases: ${numberWithCommas(
+                      countryData.casesPerOneMillion
+                    )}</p>
+                    </div>
+                    <div class="per-people mx-3 my-1">
+                    <h6>One Per People</h6>
+                  
+                      <p>Tests &nbsp; : ${numberWithCommas(
+                        countryData.oneTestPerPeople
+                      )}</p>
+                      <p>Death : ${numberWithCommas(
+                        countryData.oneTestPerPeople
+                      )}</p>
+                      <p>Cases : ${numberWithCommas(
+                        countryData.oneCasePerPeople
+                      )}</p>
+                      
+                    </div>
+                    <div class="mx-3 my-1">
+                    
+                  </div>
+              </div>
+             
+         
+        `;
 };
 
 //----- FUNCTION- SUBMIT FORM  --------------------------------------------
@@ -129,7 +196,9 @@ searchBtn.addEventListener("submit", formSubmitHandler);
 countryInputName.addEventListener("keyup", function (event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
+  
     formSubmitHandler(event);
+    // autocompleteItems.textContent="";
   }
 });
 
