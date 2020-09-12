@@ -53,7 +53,7 @@ const fetchTopCountries = () => {
         liveCountryEL.addEventListener("click", getElement);
       });
 
-      for (let i = 0; i < page + 10; i++) {
+      for (let i = 0; i < page + 11; i++) {
         liveReports.appendChild(countryList[i]);
       }
 
@@ -71,17 +71,17 @@ const fetchTopCountries = () => {
         }
 
         // click next page
-        page == countryList.length - 10 ? page == 0 : (page += 10);
+        page == countryList.length - 11 ? page == 0 : (page += 11);
 
         liveReports.innerHTML = "";
-        for (let i = page; i < page + 10; i++) {
+        for (let i = page; i < page + 11; i++) {
           liveReports.appendChild(countryList[i]);
         }
       });
 
       previousTab.addEventListener("click", () => {
         // disable or enable pre and next button when reached the last or first page
-        if (page == 10) {
+        if (page == 11) {
           previousTab.classList.add("disable");
         } else if (page >= 199) {
           nextTab.classList.add("disable");
@@ -91,10 +91,10 @@ const fetchTopCountries = () => {
         }
 
         // click previous page
-        page == 0 ? (page = countryList.length - 10) : (page -= 10);
+        page == 0 ? (page = countryList.length - 11) : (page -= 11);
 
         liveReports.innerHTML = "";
-        for (let i = page; i < page + 10; i++) {
+        for (let i = page; i < page + 11; i++) {
           liveReports.appendChild(countryList[i]);
         }
       });
