@@ -1,7 +1,6 @@
 const prevNews = document.querySelector(".prev-news");
 const nextNews = document.querySelector(".next-news");
 
-// https://developer.smartable.ai/api-details#api=coronavirus&operation=stats
 function getNews() {
   fetch("https://cryptic-ravine-96718.herokuapp.com/")
     .then(response => response.json())
