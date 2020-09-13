@@ -35,14 +35,14 @@ fully responive in all media-screen sizes;
 
 ### LARGE SCREEN SIZE
 
-<img src="./assets/img/covid-tracker-wide-screen.png" alt="large-screen app" style="height:500px"/>
+<img src="./assets/img/covid-tracker-wide-screen.png" alt="large-screen app"/>
 
 <!-- <img src="./assets/img/Screenshot-4.png" alt="large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-5.png" alt="large-screen app" style="height:500px"/> -->
 
 ### MEDIUM SCREEN SIZE
 
-<img src="./assets/img/covid-tracker-midsize-screen.png" alt="large-screen app" style="height:500px"/>
+<img src="./assets/img/covid-tracker-midsize-screen.png" alt="large-screen app" width="800"/>
 
 <!-- <img src="./assets/img/Screenshot-6.png" alt="medium-screen app" style="height:500px"/><hr>
 <img src="./assets/img/Screenshot-7.png" alt="medium-screen app" style="height:500px"/><hr>
@@ -50,7 +50,7 @@ fully responive in all media-screen sizes;
 
 ### SMALL SCREEN SIZE
 
-<img src="./assets/img/covid-tracker-small-screen.png" alt="large-screen app" style="height:500px"/>
+<img src="./assets/img/covid-tracker-small-screen.png" alt="large-screen app" width="700"/>
 <!-- 
 <img src="./assets/img/Screenshot-9.png" alt="small-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-10.png" alt="small-screen app" style="height:500px"/>
@@ -59,9 +59,9 @@ fully responive in all media-screen sizes;
 
 ### EXTRA-SMALL SCREEN SIZE
 
-<img src="./assets/img/covid-tracker-mobile.png" alt="large-screen app" style="width:100px"/>
+<img src="./assets/img/covid-tracker-mobile.png" alt="large-screen app" width="500"/>
 
-<!-- <img src="./assets/img/Screenshot-13.png" alt="extra-small-screen app" style="height:300px"/>
+<!-- <img src="./assets/img/Screenshot-13.png" alt="extra-small-screen app" style="height:600px"/>
 <img src="./assets/img/Screenshot-14.png" alt="extra-small-screen app" style="height:300px"/>
 <img src="./assets/img/Screenshot-15.png" alt="extra-small-screen app" style="height:300px"/>
 <img src="./assets/img/Screenshot-16.png" alt="extra-small-screen app" style="height:300px"/>
