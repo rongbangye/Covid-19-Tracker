@@ -15,6 +15,7 @@ User has the ability to search for any country in the world or track the live -r
 - CSS
 - BOOTSTRAP
 - JAVASCRIPT
+- MOMENT.js
 - Google-map-Api
 - CoroNews-19 API - (https://coronews.iamharsh.dev/)
 - Disease-corona - (https://disease.sh/docs/#/COVID-19%3A%20Worldometers)

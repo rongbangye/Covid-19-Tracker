@@ -48,15 +48,15 @@ function outsideModalClick(e) {
 
 //----- FUNCTION- FETCH COUNTRY DATA  --------------------------------------------
 
-var getCountryData = function(country) {
+var getCountryData = function (country) {
   var urlCountry =
     "https://disease.sh/v3/covid-19/countries/" +
     country +
     "?yesterday=false&strict=false";
 
   // fetch data for each country
-  fetch(urlCountry).then(response => {
-    response.json().then(data => {
+  fetch(urlCountry).then((response) => {
+    response.json().then((data) => {
       // if there is no response open modal with the error message
       if (data.message) {
         openModal(data.message);
@@ -65,7 +65,7 @@ var getCountryData = function(country) {
       // display spinner when click the search button
       document.querySelector(".spinner").style.display = "";
       // Delay a half second to show the loading spinner
-      setTimeout(function() {
+      setTimeout(function () {
         // if successfully load data, hide the spinner
         if (data) {
           document.querySelector(".spinner").style.display = "none";
@@ -79,7 +79,7 @@ var getCountryData = function(country) {
 
 //----- FUNCTION- DISPLAY DATA TO THE UI --------------------------------------------
 
-var displayDataToTheUI = function(countryData) {
+var displayDataToTheUI = function (countryData) {
   // Display all the values to the UI
   activeCasesEl.textContent = numberWithCommas(countryData.active);
   recoveredEl.textContent = numberWithCommas(countryData.recovered);
@@ -158,7 +158,7 @@ var displayDataToTheUI = function(countryData) {
 
 //----- FUNCTION- SUBMIT FORM  --------------------------------------------
 
-var formSubmitHandler = function(event) {
+var formSubmitHandler = function (event) {
   event.preventDefault();
   // get value from input element
   var countryName = countryInputName.value.trim();
@@ -175,7 +175,7 @@ var formSubmitHandler = function(event) {
 
 //----- FUNCTION- LOAD PAGE ------------------------------------------------
 
-var loadPage = function() {
+var loadPage = function () {
   // get the last searched country name from localstorage
   var lastSearchedCountry = localStorage.getItem("searchedCountry");
 
@@ -192,7 +192,7 @@ loadPage();
 searchBtn.addEventListener("submit", formSubmitHandler);
 
 // Execute a function when the user releases a key on the keyboard
-countryInputName.addEventListener("keyup", function(event) {
+countryInputName.addEventListener("keyup", function (event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     formSubmitHandler(event);
@@ -202,12 +202,10 @@ countryInputName.addEventListener("keyup", function(event) {
 
 //================  AUTO- COMPLETE=============================================================
 
-function autocomplete(inp, arr) {
-  /*the autocomplete function takes two arguments,
-  the text field element and an array of possible autocompleted values:*/
+var autocomplete = function (inp, arr) {
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
+  inp.addEventListener("input", function (e) {
     var a,
       b,
       i,
@@ -236,14 +234,12 @@ function autocomplete(inp, arr) {
         /*insert a input field that will hold the current array item's value:*/
         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
         /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener("click", function(e) {
+        b.addEventListener("click", function (e) {
           /*insert the value for the autocomplete text field:*/
           inp.value = this.getElementsByTagName("input")[0].value;
 
           getCountryData(inp.value);
 
-          /*close the list of autocompleted values,
-              (or any other open lists of autocompleted values:*/
           closeAllLists();
         });
         a.appendChild(b);
@@ -251,33 +247,25 @@ function autocomplete(inp, arr) {
     }
   });
   /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function(e) {
+  inp.addEventListener("keydown", function (e) {
     var x = document.getElementById(this.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
-      /*If the arrow DOWN key is pressed,
-        increase the currentFocus variable:*/
+
       currentFocus++;
-      /*and and make the current item more visible:*/
       addActive(x);
     } else if (e.keyCode == 38) {
-      //up
-      /*If the arrow UP key is pressed,
-        decrease the currentFocus variable:*/
       currentFocus--;
-      /*and and make the current item more visible:*/
+
       addActive(x);
     } else if (e.keyCode == 13) {
-      /*If the ENTER key is pressed, prevent the form from being submitted,*/
       e.preventDefault();
       if (currentFocus > -1) {
-        /*and simulate a click on the "active" item:*/
         if (x) x[currentFocus].click();
       }
     }
   });
-  function addActive(x) {
-    /*a function to classify an item as "active":*/
+  var addActive = function (x) {
     if (!x) return false;
     /*start by removing the "active" class on all items:*/
     removeActive(x);
@@ -285,27 +273,24 @@ function autocomplete(inp, arr) {
     if (currentFocus < 0) currentFocus = x.length - 1;
     /*add class "autocomplete-active":*/
     x[currentFocus].classList.add("autocomplete-active");
-  }
-  function removeActive(x) {
-    /*a function to remove the "active" class from all autocomplete items:*/
+  };
+  var removeActive = function (x) {
     for (var i = 0; i < x.length; i++) {
       x[i].classList.remove("autocomplete-active");
     }
-  }
-  function closeAllLists(elmnt) {
-    /*close all autocomplete lists in the document,
-    except the one passed as an argument:*/
+  };
+  var closeAllLists = function (el) {
     var x = document.getElementsByClassName("autocomplete-items");
     for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
+      if (el != x[i] && el != inp) {
         x[i].parentNode.removeChild(x[i]);
       }
     }
-  }
-  /*execute a function when someone clicks in the document:*/
-  document.addEventListener("click", function(e) {
+  };
+
+  document.addEventListener("click", function (e) {
     closeAllLists(e.target);
   });
-}
+};
 
 autocomplete(document.getElementById("country-input"), countryNamesArray);
