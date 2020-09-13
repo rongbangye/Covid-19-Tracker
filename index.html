@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="./assets/css/map.css" />
   <link rel="stylesheet" href="./assets/css/live-report.css" />
   <link rel="stylesheet" href="./assets/css/news.css" />
+  <!-- Add Chart JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+    crossorigin="anonymous"></script>
   <title>Covid -Tracker</title>
 </head>
 
@@ -49,7 +53,7 @@
       </form>
       <ul class="navbar-nav d-none d-lg-flex">
         <li class="nav-item mx-3">
-          <a class="nav-link" href="#">News</a>
+          <a class="nav-link" href="#news">News</a>
         </li>
 
         <li class="nav-item mx-3">
@@ -168,7 +172,7 @@
         </div>
 
         <div class="row news-symptoms-container">
-          <div class="col news">
+          <div class="col news" id="news">
             <div class="btn btn-news">News</div>
 
             <div class="news-main-container">
@@ -195,10 +199,12 @@
           <div class="col symptoms">
             <a class="btn btn-symptoms" href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
               target="_blank">Symptoms</a>
-            <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cough.jpg"
-                style="color: red; height: 170px" /></a>
-            <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cold.jpg"
-                style="height: 170px" /></a>
+            <div class="symptoms-img">
+              <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cough.jpg"
+                  style="color: red; height: 170px" /></a>
+              <a href="https://www.freepik.com/vectors/health"><img src="./assets/img/cold.jpg"
+                  style="height: 170px" /></a>
+            </div>
           </div>
 
         </div>

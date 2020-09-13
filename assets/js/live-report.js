@@ -56,10 +56,8 @@ const fetchTopCountries = () => {
       nextTab.addEventListener("click", () => {
         // disable or enable pre and next button when reached the last or first page
         if (page == 0) {
-          console.log(page);
           previousTab.classList.remove("disable");
         } else if (page >= 199) {
-          console.log(page);
           nextTab.classList.add("disable");
           previousTab.classList.remove("disable");
         } else {

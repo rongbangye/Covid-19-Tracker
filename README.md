@@ -29,11 +29,9 @@ fully responive in all media-screen sizes;
 
 ### EXTRA LARGE SCREEN SIZE
 
-
 <img src="./assets/img/Screenshot-1.png" alt="extra-large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-2.png" alt="extra-large-screen app" style="height:500px"/>
 <img src="./assets/img/Screenshot-3.png" alt="extra-large-screen app" style="height:500px"/>
-
 
 ### LARGE SCREEN SIZE
 
