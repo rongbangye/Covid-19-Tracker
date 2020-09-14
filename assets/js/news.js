@@ -1,7 +1,6 @@
 const prevNews = document.querySelector(".prev-news");
 const nextNews = document.querySelector(".next-news");
 
-// https://developer.smartable.ai/api-details#api=coronavirus&operation=stats
 function getNews() {
   fetch("https://cryptic-ravine-96718.herokuapp.com/")
     .then(response => response.json())
@@ -10,7 +9,6 @@ function getNews() {
 
       let page = 0;
       let newsList = [];
-      console.log(newsCovid);
       newsCovid.news.forEach(news => {
         let liveCountryEL = document.createElement("li");
 
@@ -34,7 +32,6 @@ function getNews() {
       }
 
       nextNews.addEventListener("click", () => {
-        console.log(page);
         // disable or enable next and previous button when reach on first or last page
         page == 0
           ? prevNews.classList.remove("disable")
