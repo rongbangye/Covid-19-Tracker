@@ -162,6 +162,7 @@ var formSubmitHandler = function (event) {
   event.preventDefault();
   // get value from input element
   var countryName = countryInputName.value.trim();
+  console.log(countryName);
 
   if (countryName) {
     localStorage.setItem("searchedCountry", countryName);
@@ -182,9 +183,10 @@ var loadPage = function () {
   // get the data for the last searched country
   if (lastSearchedCountry) {
     getCountryData(lastSearchedCountry);
+  } else {
+    getCountryData("usa");
   }
   // if there was no searched country before search for USA
-  getCountryData("usa");
 };
 
 loadPage();
@@ -224,22 +226,25 @@ var autocomplete = function (inp, arr) {
     this.parentNode.appendChild(a);
     /*for each item in the array...*/
     for (i = 0; i < arr.length; i++) {
-      /*check if the item starts with the same letters as the text field value:*/
+      // check if the item starts with the same letters as the text field value
       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-        /*create a DIV element for each matching element:*/
+        // create a DIV element for each matching element
         b = document.createElement("DIV");
-        /*make the matching letters bold:*/
+        // make the matching letters bold
         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
         b.innerHTML += arr[i].substr(val.length);
-        /*insert a input field that will hold the current array item's value:*/
+        //insert a input field that will hold the current array item's value:
         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-        /*execute a function when someone clicks on the item value (DIV element):*/
+        //execute a function when someone clicks on the item value (DIV element)
         b.addEventListener("click", function (e) {
-          /*insert the value for the autocomplete text field:*/
+          //insert the value for the autocomplete text field:
           inp.value = this.getElementsByTagName("input")[0].value;
-
+          // save the country name to local storage
+          localStorage.setItem("searchedCountry", inp.value);
+          // fetch data
           getCountryData(inp.value);
-
+          
+          // close lists
           closeAllLists();
         });
         a.appendChild(b);
@@ -251,7 +256,6 @@ var autocomplete = function (inp, arr) {
     var x = document.getElementById(this.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
-
       currentFocus++;
       addActive(x);
     } else if (e.keyCode == 38) {
